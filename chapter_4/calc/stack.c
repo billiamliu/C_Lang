@@ -2,8 +2,8 @@
 
 #define MAXDEPTH 100
 
-int sp = 0;
-double val[MAXDEPTH];
+static int sp = 0;
+static double val[MAXDEPTH];
 
 void push(double f)
 {

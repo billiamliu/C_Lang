@@ -28,8 +28,14 @@ int getop(char s[])
   if (c == '.') /* collect fraction part */
     while (isdigit(s[++i] = c = getch()))
       ;
+
   s[i] = '\0';
+
   if (c != EOF)
     ungetch(c);
+
+  if (!isdigit(s[i - 1]))
+    return s[i - 1];
+
   return NUMBER;
 }
