@@ -9,6 +9,11 @@ int getop(char s[])
 {
   int i, c;
 
+  /* NOTE testing static var
+  static int j = 0;
+  printf("GETOP has been called %d times\n", ++j);
+  */
+
   while ((s[0] = c = getch()) == ' ' || c == '\t')
     ;
 
