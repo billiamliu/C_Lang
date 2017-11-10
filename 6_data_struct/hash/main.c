@@ -8,6 +8,7 @@ struct nlist {
 
 struct nlist *install(char *, char *);
 struct nlist *lookup(char *);
+int undef(char *);
 
 int main()
 {
@@ -21,7 +22,9 @@ int main()
 
   install(foo, "hi");
 
-  printf("defn: %s", (lookup("foo"))->defn);
+  printf("defn: %s\n", lookup("foo")->defn);
+  printf(undef("foo") == 0 ? "removed\n" : "already removed\n");
+  printf(undef("foo") == 0 ? "removed\n" : "already removed\n");
 
   return 0;
 }
